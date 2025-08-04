@@ -1,0 +1,109 @@
+/* === STYLES GÉNÉRAUX === */
+
+body {
+  background: url('../image/logo-fond-avant-propos.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  line-height: 1.7;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn-retour {
+  display: inline-block;
+  padding: 12px 28px;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-retour:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 25px 20px;
+    border-radius: 8px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .btn-retour {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* === ANIMATIONS D'APPARITION MODERNES === */
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-reveal {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+/* Délais pour apparition en cascade */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }

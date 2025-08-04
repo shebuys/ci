@@ -1,0 +1,344 @@
+body {
+  background: url('../image/arriere-plan.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-position: center 3px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-left: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: beige;
+}
+
+.plateformes-title {
+  font-size: 26px;
+  margin-top: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.logos img {
+  width: 70px;
+  height: 70px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+.more {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin-left: 10px;
+}
+
+.bottom-links {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bottom-links a {
+  padding: 10px 24px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.bottom-links a:hover {
+  background: white;
+  color: black;
+}
+
+/* === Responsive Mobile Optimisé === */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+
+  .plateformes-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .logos img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .more {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .bottom-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .bottom-links a {
+    font-size: 14px;
+    padding: 12px 20px;
+    width: 90%;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .social-icons img {
+    width: 24px;
+    margin: 0 6px;
+  }
+}
+
+/* === ANIMATIONS PRO === */
+
+/* Animation fade + slide */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pulse (légère) */
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animation des logos */
+.logos img {
+  animation: subtlePulse 4s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Apparition de la section hero */
+.hero {
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0; /* initialement invisible */
+  animation-delay: 0.3s;
+}
+
+/* Animation du titre */
+.title {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+/* Animation du sous-titre */
+.subtitle {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.9s;
+}
+
+/* Animation des liens en bas */
+.bottom-links a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+.bottom-links a:nth-child(1) {
+  animation-delay: 1.2s;
+}
+.bottom-links a:nth-child(2) {
+  animation-delay: 1.4s;
+}
+.bottom-links a:nth-child(3) {
+  animation-delay: 1.6s;
+}
+/* Boutons dynamiques et modernes */
+
+.bottom-links a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
+  animation-fill-mode: both;
+
+  padding: 10px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: 
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.bottom-links a:hover {
+  background-color: #ffffff;
+  color: #111;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+@keyframes iconBounce {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation au survol */
+.social-icons img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  animation: iconBounce 0.6s ease forwards;
+  filter: brightness(1.2);
+}
+.logo {
+  transition: transform 0.4s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.05);
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+/* Animation bounce légère */
+@keyframes bounceIn {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2) rotate(-3deg);
+  }
+  60% {
+    transform: scale(0.95) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Appliquée à tous les logos plateformes */
+.logo-plateforme {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Animation personnalisée sur hover */
+.logo-plateforme:hover {
+  animation: bounceIn 0.5s ease forwards;
+}
